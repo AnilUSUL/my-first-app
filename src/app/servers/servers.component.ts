@@ -4,12 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-servers',
   //selector: '.app-servers',
   //selector: '[app-servers]',
-  //templateUrl: './servers.component.html',
-  template: `
+  templateUrl: './servers.component.html',
+  /* template: `
     <p>Hola</p>
     <app-server></app-server>
     <app-server></app-server>
-  `,
+  `, */
   //styleUrls: ['./servers.component.css']
   styles: [`
     p {
@@ -18,8 +18,12 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+  allowNewServers: boolean = false;
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServers = true;
+    }, 2000);
+  }
 
   ngOnInit() {
   }
