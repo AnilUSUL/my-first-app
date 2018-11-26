@@ -1,7 +1,9 @@
 <button 
-[disabled]="!allowNewServers">
+[disabled]="!allowNewServers"
+(click)="onCreateServer()">
   Disable Server
 </button>
+<p [innerText]="serverCreationStatus"></p>
 <app-server></app-server>
 <app-server></app-server>
 <app-server></app-server>
